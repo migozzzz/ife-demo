@@ -1,0 +1,14 @@
+.table {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid red;
+}
+
+.table th,
+td {
+  border: 1px solid red;
+}
+
+.fat {
+  width: 100%;
+}

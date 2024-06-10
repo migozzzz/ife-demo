@@ -1,0 +1,97 @@
+body,
+html {
+  margin: 0;
+  font-size: 14px;
+}
+.center {
+  position: relative;
+  width: 800px;
+  margin: auto;
+}
+a {
+  color: gray;
+  text-decoration: none;
+}
+a.active {
+  color: #222;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+dd {
+  margin-left: 0;
+}
+main > div:nth-child(odd) {
+  padding: 40px 0;
+  background-color: lightcyan;
+}
+main > div:nth-child(even) {
+  padding: 40px 0;
+  background-color: lightgoldenrodyellow;
+}
+
+/* header */
+header {
+  background-color: lightgray;
+  padding: 20px 0;
+}
+.nav ul {
+  display: flex;
+}
+.nav li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* main */
+main .center::after {
+  content: "~~~~~~~~";
+  color: red;
+}
+
+/* base */
+.base {
+  overflow: hidden;
+}
+.base .center {
+  background: url("./imgs/bg.webp") no-repeat center center/contain;
+}
+.base .avatar {
+  float: left;
+  margin: 0 20px 0 0;
+  border-radius: 50%;
+}
+.base .desc {
+  text-align: justify;
+}
+
+/* work */
+.work .time {
+  color: goldenrod;
+}
+.work p strong {
+  color: lavender;
+  border-bottom: 1px solid lawngreen;
+}
+.work p span {
+  color: goldenrod;
+}
+
+/* edu */
+.edu dd {
+  color: lightgray;
+  margin-bottom: 20px;
+}
+
+/* language */
+.language dd {
+  color: lightgray;
+  margin-bottom: 20px;
+}
+
+/* prize */
+.prize dd {
+  color: lightgray;
+  margin-bottom: 20px;
+}

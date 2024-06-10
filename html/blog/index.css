@@ -1,0 +1,30 @@
+body {
+  font-size: 14px;
+  padding: 0 20px;
+}
+
+.water .author {
+  color: blue;
+}
+
+.table {
+  width: 400px;
+  border: 1px solid red;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  border: 1px solid red;
+  padding: 5px;
+}
+
+.addr {
+  text-align: right;
+}
+
+.waterImg {
+  margin-left: 0;
+  margin-right: 0;
+}
