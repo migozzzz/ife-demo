@@ -1,0 +1,206 @@
+/* task1 */
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&family=Ma+Shan+Zheng&display=swap");
+
+html,
+body {
+  font-family: "Architects Daughter", Lobster, Georgia, serif;
+}
+
+body {
+  background: linear-gradient(#03a9f4 10px, transparent 10px, transparent)
+    no-repeat;
+}
+
+.moby {
+  width: 750px;
+  margin: auto;
+  position: relative;
+  padding-left: 150px;
+  padding-top: 25px;
+  font-size: 20px;
+  line-height: 2;
+  color: #333;
+}
+
+h2 {
+  padding-top: 70px;
+  writing-mode: vertical-rl;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  line-height: 1;
+  color: #03a9f4;
+  font-size: 80px;
+}
+
+p:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* task2 */
+#content {
+  width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  text-align: center;
+}
+#content h2 {
+  overflow: hidden;
+}
+#content > div {
+  float: left;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#content > div:first-of-type {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: blue;
+}
+#content div:nth-child(3) {
+  background-color: lavender;
+  position: relative;
+  border: 0;
+  border-left: 50px solid red;
+  border-top: 50px solid green;
+  border-right: 50px solid blue;
+  border-bottom: 50px solid yellow;
+}
+#content div:nth-child(3) .text {
+  position: absolute;
+}
+#content > div:last-of-type {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #000;
+  z-index: 1;
+  border: 20px solid red;
+  box-sizing: border-box;
+}
+
+/* task3 */
+.btn {
+  padding: 10px 40px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn-default {
+  color: gray;
+  border: 2px solid lightgray;
+}
+.btn-default:hover {
+  background-color: lightgray;
+}
+.btn-default:active {
+  color: #fff;
+  background-color: gray;
+}
+
+.btn-danger {
+  color: #fff;
+  border: 2px solid lightcoral;
+  background-color: lightcoral;
+}
+.btn-danger:hover {
+  background-color: lightcoral;
+}
+.btn-danger:active {
+  background-color: red;
+}
+
+.btn-success {
+  color: #fff;
+  border: 2px solid lightblue;
+  background-color: lightblue;
+}
+.btn-success:hover {
+  background-color: lightblue;
+}
+.btn-success:active {
+  background-color: blue;
+}
+
+.btn-info {
+  color: lightgreen;
+  border: 2px solid lightcyan;
+}
+.btn-info:hover {
+  background-color: lightcyan;
+}
+.btn-info:active {
+  color: #fff;
+  background-color: green;
+}
+
+.btn-warning {
+  color: yellow;
+  border: 2px solid lightgoldenrodyellow;
+}
+.btn-warning:hover {
+  background-color: lightgoldenrodyellow;
+}
+.btn-warning:active {
+  color: #fff;
+  background-color: orange;
+}
+
+.btn-primary {
+  color: #fff;
+  border: 2px solid greenyellow;
+  background-color: greenyellow;
+}
+.btn-primary:hover {
+  background-color: greenyellow;
+}
+.btn-primary:active {
+  background-color: green;
+}
+
+/* task4 */
+.tab {
+  position: relative;
+}
+.tabs {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  list-style: none;
+  padding: 0;
+}
+.tab-item {
+  cursor: pointer;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  color: blue;
+}
+.tab-item.active {
+  border: 1px solid gray;
+  margin-bottom: -1px;
+  border-bottom-color: #fff;
+}
+.tab-content {
+  position: absolute;
+  left: 0;
+  top: 43px;
+  display: none;
+}
+.tab-content:first-of-type {
+  display: block;
+}
