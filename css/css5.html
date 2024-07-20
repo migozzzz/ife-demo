@@ -3,38 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>图片响应式</title>
+    <title>三栏布局，顶部固定</title>
     <style>
-      .box {
-        width: 400px;
-        height: 300px;
+      body,
+      html {
+        margin: 0;
       }
-      /* img换成div，这里就设置background-size */
-      .box img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      header {
+        height: 100px;
+        padding: 20px;
+        box-sizing: border-box;
       }
-      .container {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+      nav {
+        position: sticky;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #000;
+        color: #fff;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+      }
+      li + li {
+        margin-left: 20px;
+      }
+      li a {
+        color: #fff;
+      }
+      section {
+        padding: 40px;
+        background-color: lightgray;
+      }
+      section:nth-child(2n) {
+        background-color: lightpink;
       }
     </style>
   </head>
   <body>
-    <div class="card">
-      <!--图片框设置400像素宽 300像素高-->
-      <div class="box">
-        <img
-          src="https://b.bdstatic.com/searchbox/icms/searchbox/img/mountain.jpg"
-        />
-      </div>
-      <!--文本不换行,溢出省略号表示-->
-      <p class="container">
-        这是一些文本 这是一些文本 这是一些文本这是一些文本 这是一些文本
-        这是一些文本这是一些文本 这是一些文本 这是一些文本
-      </p>
-    </div>
+    <header>logo</header>
+    <nav>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="">blog</a></li>
+        <li><a href="">article</a></li>
+        <li><a href="">contact me</a></li>
+      </ul>
+    </nav>
+    <script>
+      const str =
+        "<section>      <h1>main content me</h1>      <div>        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias vitae        mollitia ullam temporibus laudantium doloremque dolorum nisi commodi vel        rem harum, minus, aliquid voluptate. Dolore repellendus ea numquam        soluta quisquam?      </div>    </section>";
+      let res = "";
+      for (let i = 0; i < 10; i++) {
+        res += str;
+      }
+      document.documentElement.innerHTML += res;
+    </script>
   </body>
 </html>
