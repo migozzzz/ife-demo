@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>响应式表单</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Register</h1>
+      <form action="" class="form">
+        <div class="form-item">
+          <label for="fullname">full name</label>
+          <input
+            type="text"
+            class="form-input"
+            placeholder="fullname"
+            id="fullname"
+          />
+        </div>
+
+        <div class="form-item">
+          <label for="username">user name</label>
+          <div class="form-input form-prepend">
+            <img src="./user.png" width="20px" alt="" />
+            <input type="text" id="username" placeholder="username" />
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label for="password">password</label>
+          <input
+            type="password"
+            class="form-input"
+            id="password"
+            placeholder="password"
+          />
+        </div>
+
+        <div class="form-item">
+          <label for="address">address</label>
+          <select
+            name="address"
+            class="form-input"
+            id="address"
+            placeholder="address"
+          >
+            <option value="china">china</option>
+            <option value="aa">aa</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="suggestion">suggestion</label>
+          <textarea
+            name="suggestion"
+            class="form-input"
+            id="suggestion"
+            placeholder="suggestion"
+          ></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit">submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

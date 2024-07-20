@@ -1,0 +1,100 @@
+body,
+html,
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.wrap {
+  margin: 40px;
+  padding: 40px;
+  box-shadow: 0 5px 10px #ccc;
+  border-top: 10px solid #008b8b;
+  border-radius: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  background-color: whitesmoke;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  height: 42px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+h1 {
+  text-align: center;
+  color: #008b8b;
+}
+
+.form-item {
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.form-item label {
+  width: 20%;
+  text-align: right;
+  padding: 0 20px;
+  padding-top: 8px;
+}
+.form-input {
+  flex: 1;
+}
+.form-prepend {
+  position: relative;
+  width: 100%;
+}
+.form-prepend img {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+.form-prepend input {
+  padding-left: 40px;
+}
+
+.form-submit {
+  overflow: hidden;
+}
+button[type="submit"] {
+  padding: 12px 20px;
+  background-color: #008b8b;
+  float: right;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    text-align: left;
+  }
+  .form-item {
+    flex-direction: column;
+  }
+  .form-item label {
+    width: 100%;
+    text-align: left;
+    padding: 0 0 10px;
+  }
+  button[type="submit"] {
+    width: 100%;
+  }
+}
