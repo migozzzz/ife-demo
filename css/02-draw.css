@@ -101,11 +101,11 @@ p:last-child {
 }
 
 .btn-default {
-  color: gray;
-  border: 2px solid lightgray;
+  color: #757779;
+  border: 2px solid #e8eaec;
 }
 .btn-default:hover {
-  background-color: lightgray;
+  background-color: #e8eaec;
 }
 .btn-default:active {
   color: #fff;
@@ -114,11 +114,11 @@ p:last-child {
 
 .btn-danger {
   color: #fff;
-  border: 2px solid lightcoral;
-  background-color: lightcoral;
+  border: 2px solid #dc6169;
+  background-color: #dc6169;
 }
 .btn-danger:hover {
-  background-color: lightcoral;
+  background-color: #dc6169;
 }
 .btn-danger:active {
   background-color: red;
@@ -126,22 +126,22 @@ p:last-child {
 
 .btn-success {
   color: #fff;
-  border: 2px solid lightblue;
-  background-color: lightblue;
+  border: 2px solid #3c78b4;
+  background-color: #3c78b4;
 }
 .btn-success:hover {
-  background-color: lightblue;
+  background-color: #3c78b4;
 }
 .btn-success:active {
   background-color: blue;
 }
 
 .btn-info {
-  color: lightgreen;
-  border: 2px solid lightcyan;
+  color: #60c3c6;
+  border: 2px solid #60c3c6;
 }
 .btn-info:hover {
-  background-color: lightcyan;
+  background-color: #60c3c6;
 }
 .btn-info:active {
   color: #fff;
@@ -149,11 +149,12 @@ p:last-child {
 }
 
 .btn-warning {
-  color: yellow;
-  border: 2px solid lightgoldenrodyellow;
+  color: #edaf68;
+  border: 2px solid #edaf68;
 }
 .btn-warning:hover {
-  background-color: lightgoldenrodyellow;
+  color: #fff;
+  background-color: #edaf68;
 }
 .btn-warning:active {
   color: #fff;
@@ -162,11 +163,11 @@ p:last-child {
 
 .btn-primary {
   color: #fff;
-  border: 2px solid greenyellow;
-  background-color: greenyellow;
+  border: 2px solid #55b095;
+  background-color: #55b095;
 }
 .btn-primary:hover {
-  background-color: greenyellow;
+  background-color: #55b095;
 }
 .btn-primary:active {
   background-color: green;
