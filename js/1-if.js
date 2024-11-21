@@ -1,3 +1,5 @@
+// if
+
 // 水仙花（三位数）
 function isNar(a) {
   const len = a + "";
