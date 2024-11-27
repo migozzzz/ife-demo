@@ -102,6 +102,49 @@ function isPalindromicString(str) {
 
 // 6凯撒加密
 // https://www.cnblogs.com/05-hust/p/15576059.html
+// https://blog.csdn.net/BYZY1314/article/details/128096505
+{
+  /* <div>
+<label>偏移:</label><input type="text" name="offset" size=5 value=3><br>
+<label>明文:<label></label><input  type="text" name="plain" size=50 value="This is a test."><br>
+<label>密文:</label><input type="text" name="enc" size=50><br>
+<input type="button" value="加密" onClick="encrypt()">&nbsp;
+<input type="button" value="解密" onClick="decrypt()">
+</div> */
+}
+function encrypt(str, num) {
+  let outStr = "";
+  for (let i = 0; i < str.length; i++) {
+    const loc = str.charCodeAt(i);
+    if (loc >= 65 && loc <= 90) {
+      // 65-90大写
+      outStr += String.fromCharCode(((loc - 65 + num + 26) % 26) + 65);
+    } else if (loc >= 97 && loc <= 122) {
+      // 97-122小写
+      outStr += String.fromCharCode(((loc - 97 + num + 26) % 26) + 97);
+    } else {
+      outStr += String.fromCharCode(loc);
+    }
+  }
+  return outStr;
+}
+// console.log(encrypt("This is a test.", 3));
+function decrypt(str, num) {
+  var outStr = "";
+  for (let i = 0; i < str.length; i++) {
+    const loc = str.charCodeAt(i);
+    if (loc >= 65 && loc <= 90) {
+      outStr += String.fromCharCode(((loc - 65 - num + 26) % 26) + 65);
+    } else if (loc >= 97 && loc <= 122) {
+      outStr += String.fromCharCode(((loc - 97 - num + 26) % 26) + 97);
+    } else {
+      outStr += String.fromCharCode(loc);
+    }
+  }
+  return outStr;
+}
+
+// 6-1 js实现base64
 
 // 7打字机
 // demo：https://blog.csdn.net/tencentes/article/details/138874636

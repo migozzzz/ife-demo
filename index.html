@@ -9,7 +9,7 @@
   <body>
     <div>
       <label>偏移:</label><input type="text" name="offset" size=5 value=3><br>
-      <label>明文:<label></label><input type="text" name="plain" size=50 value="This is a test."><br>
+      <label>明文:<label></label><input  type="text" name="plain" size=50 value="This is a test."><br>
       <label>密文:</label><input type="text" name="enc" size=50><br>
       <input type="button" value="加密" onClick="encrypt()">&nbsp;
       <input type="button" value="解密" onClick="decrypt()">
@@ -17,29 +17,7 @@
 
     <script src="./index.js"></script>
     <script>
-      // 大写65-90 小写97-122 js实现base64加密解密
-      function encrypt(offset=0,str=''){
-          let res=''
-          for(let i=0;i<str.length;i++){
-            const v=str[i]+''
-            if(/^[A-Z]$/.test(v)){
-              const loc=str.charCodeAt(i)+3
-              const curLoc=loc<90?loc:(90-loc+65)
-              res+=String.fromCharCode(loc)
-            }else if(/^[a-z]$/.test(v)){
-              const loc=str.charCodeAt(i)+3
-              const curLoc=loc<97?loc:(122-loc+97)
-              res+=String.fromCharCode(loc)
-            }else{
-              res+=v
-            }
-          }
-          console.log(res);
-          return res
-      }
-      function decrypt(offset,str){
-          //这里实现解密算法
-      }
-</script>
+      // js实现base64加密解密
+    </script>
   </body>
 </html>
