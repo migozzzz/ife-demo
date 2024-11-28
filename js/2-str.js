@@ -145,6 +145,9 @@ function decrypt(str, num) {
 }
 
 // 6-1 js实现base64
+// https://www.php.cn/faq/809271.html
+// https://cloud.tencent.com/developer/article/1849549
+// https://www.jb51.net/article/138397.htm
 
 // 7打字机
 // demo：https://blog.csdn.net/tencentes/article/details/138874636
@@ -169,3 +172,7 @@ function generateTypeEffect() {
     }
   }, 100);
 }
+
+// 8大数相加、相乘
+// https://blog.csdn.net/qq_44423388/article/details/126681336
+// https://blog.csdn.net/weixin_40492102/article/details/103916691
