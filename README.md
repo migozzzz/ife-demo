@@ -1,3 +1,3 @@
 # ife-demo
 
-ife eg, about html/css/js
+demo, about html/css/js
