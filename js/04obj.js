@@ -17,7 +17,7 @@ function sumshoppingList(obj, ascendingOrder) {
 }
 // console.log(sumshoppingList(shoppingList, true));
 
-// 2 被复制的对象类型会被限制为数字、字符串、布尔、日期、数组、Object对象。不会包含函数、正则对象等
+// 2 深拷贝：被复制的对象类型会被限制为数字、字符串、布尔、日期、数组、Object对象。不会包含函数、正则对象等
 function deepClone(src) {
   if (typeof src !== "object" || src === null) {
     return src;
@@ -34,8 +34,6 @@ function deepClone(src) {
   }
   return target;
 }
-
-// 测试用例：
 var srcObj = {
   a: 1,
   b: {
@@ -54,3 +52,10 @@ console.log(abObj.b.b1[0]);
 
 console.log(tarObj.a); // 1
 console.log(tarObj.b.b1[0]); // "hello"
+
+// 3 利用通过 Object.defineProperty()来实现简易的双向数据绑定
+{
+  /* <label>姓名:</label>
+<input type="text" class="name" onchange="changeName()" />
+<button onclick="changeInput()">恢复姓名为rose</button> */
+}
