@@ -59,3 +59,47 @@ console.log(tarObj.b.b1[0]); // "hello"
 <input type="text" class="name" onchange="changeName()" />
 <button onclick="changeInput()">恢复姓名为rose</button> */
 }
+//利用通过 Object.defineProperty()来实现简易的双向数据绑定
+// 会出现无限递归的问题。
+// 还可：1修改person={_name:''}、2或新增isSetting变量
+var person = { name: "" };
+function changeName() {
+  person.name = document.getElementsByTagName("input")[0].value;
+}
+Object.defineProperty(person, "name", {
+  get() {
+    return this._name; // 避免无限递归，新增属性。
+  },
+  set(val) {
+    this._name = val;
+    document.getElementsByTagName("input")[0].value = val;
+    console.log(person.name);
+  },
+});
+function changeInput() {
+  person.name = "rose";
+}
+// GPT4
+// 定义一个全局标志来防止递归
+// var person = { name: "" };
+// var isSetting = false;
+// function changeName() {
+//   if (isSetting) return;
+//   person.name = document.getElementsByTagName("input")[0].value;
+// }
+// Object.defineProperty(person, "name", {
+//   get() {
+//     return this._name || "";
+//   },
+//   set(val) {
+//     if (this._name === val) return;
+//     this._name = val;
+//     isSetting = true;
+//     document.getElementsByTagName("input")[0].value = val; // 更新输入框的值
+//     isSetting = false;
+//     console.log("姓名更新为:", this._name);
+//   },
+// });
+// function changeInput() {
+//   person.name = "rose";
+// }

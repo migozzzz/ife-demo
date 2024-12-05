@@ -8,31 +8,10 @@
   </head>
   <body>
     <label>姓名:</label>
-    <input type="text" class="name" onchange="changeName()" />
+    <input type="text" id="inputTxt" class="name" onchange="changeName()" />
     <button onclick="changeInput()">恢复姓名为rose</button>
 
     <script src="./index.js"></script>
-    <script>
-      //利用通过 Object.defineProperty()来实现简易的双向数据绑定
-      var person = { name: "" };
-      function changeName() {
-        //修改person对象中的name的值为输入框中的值
-        person.name = document.getElementsByTagName("input")[0].value;
-        console.log(person.name);
-      }
-      Object.defineProperty(person, "name", {
-        enumerable: true,
-        configurable: true,
-        // 这里实现双向绑定，监听name值变化，input也跟着变化
-        set(val) {
-          document.getElementsByTagName("input")[0].value = val;
-          console.log(person);
-        },
-      });
-      function changeInput() {
-        //按钮事件 修改person对象中的name的值为rose
-        person.name = "rose";
-      }
-    </script>
+    <script></script>
   </body>
 </html>
