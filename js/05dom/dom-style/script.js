@@ -25,7 +25,6 @@ const renderComments = () => {
   document.getElementById("comments").insertAdjacentHTML("afterbegin", str);
 };
 
-// 调用
 renderComments();
 
 /**
@@ -40,18 +39,40 @@ const postComment = () => {
   const div2 = document.createElement("div");
   div2.textContent = comment;
   comments.unshift({
-    name: div1.innerHTML,
+    name: div1.textContent,
     comment: div2.textContent,
     time: new Date().toLocaleString(),
   });
   renderComments();
-  // document.getElementById('name')=''
-  // document.getElementById('comment')=''
+  document.getElementById("name").value = "";
+  document.getElementById("comment").value = "";
 };
 
 /**
  * @description 切换关闭留言和开启留言两种模式
  */
 const toggleComment = () => {
-  // your code here
+  const ele1 = document.getElementById("name");
+  const ele2 = document.getElementById("comment");
+  const ele3 = document
+    .getElementsByTagName("form")[0]
+    ?.getElementsByTagName("button")[0];
+  function setLabel(bool) {
+    const ele4 = document.getElementsByClassName("close")[0];
+    if (!ele4) return;
+    ele4.innerHTML = bool ? "关闭留言" : "开启留言";
+  }
+  function setBool(ele) {
+    if (!ele) return;
+    if (ele.getAttribute("disabled")) {
+      ele.removeAttribute("disabled");
+      setLabel(true);
+    } else {
+      ele.setAttribute("disabled", true);
+      setLabel(false);
+    }
+  }
+  setBool(ele1);
+  setBool(ele2);
+  setBool(ele3);
 };
